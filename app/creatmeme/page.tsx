@@ -21,7 +21,8 @@ const Generate = ({
       `https://api.imgflip.com/caption_image?template_id=${searchParams.id}&username=Ubaidraza&password=Ubaid123&text0=${input1.current?.value}&text1=${input2.current?.value}&text2=${input3.current?.value}&text3=${input4.current?.value}`,
       {
         method: "POST",
-      }
+      }  
+
     );
     const response = await data.json();
     setImage(response.data.url);
@@ -138,7 +139,7 @@ const Generate = ({
           </form>
         </div>
       ) : null}
-      {meme ? (
+      {meme ? (    
         <div className="flex justify-center mt-5">
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure>
